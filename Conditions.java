@@ -9,7 +9,9 @@ public class Conditions {
 
 	private static Conditions condition = null;
 
-
+	/*
+	 * returns a condition that tests if the player is doing the cutting action
+	 */
 	public Condition Chopping() {
 		return new Condition() {
 
@@ -21,6 +23,10 @@ public class Conditions {
 		};
 
 	}
+
+	/*
+	 * returns a condition that tests if the bank screen is open
+	 */
 	public Condition Banking() {
 		return new Condition() {
 
@@ -32,6 +38,10 @@ public class Conditions {
 		};
 
 	}
+
+	/*
+	 * creates a condition that tests if the player is doing an activity (not standing there)
+	 */
 	public Condition DoingActivity() {
 		return new Condition() {
 
@@ -43,6 +53,10 @@ public class Conditions {
 		};
 
 	}
+
+	/*
+	 * creates a condition that tests if the player is moving
+	 */
 	public Condition Moving() {
 		return new Condition() {
 
@@ -58,6 +72,9 @@ public class Conditions {
 
 	}
 
+		/*
+		 * method to that returns the value of a condition
+		 */
 	public static Conditions get() {
 		if(condition!=null) {
 			return condition;
